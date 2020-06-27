@@ -1,0 +1,35 @@
+abdulahman@abdulahman-VirtualBox:~$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+abdulahman@abdulahman-VirtualBox:~$ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+Executing: /tmp/apt-key-gpghome.MxA5rPDF0K/gpg.1.sh --keyserver hkp://keyserver.ubuntu.com:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+gpg: key F42ED6FBAB17C654: "Open Robotics <info@osrfoundation.org>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+abdulahman@abdulahman-VirtualBox:~$ sudo apt update
+Hit:1 http://sa.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://sa.archive.ubuntu.com/ubuntu focal-updates InRelease [107 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]
+Hit:4 http://packages.ros.org/ros/ubuntu focal InRelease                
+Get:5 http://sa.archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]
+Get:6 http://sa.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [105 kB]
+Get:7 http://sa.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [152 kB]
+Get:8 http://sa.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [532 B]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [21.2 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [31.6 kB]
+Fetched 622 kB in 2s (306 kB/s)            
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+All packages are up to date.
+abdulahman@abdulahman-VirtualBox:~$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+abdulahman@abdulahman-VirtualBox:~$ sudo apt install ros-noetic-desktop-full
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ros-noetic-desktop-full is already the newest version (1.5.0-1focal.20200615.143854).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+abdulahman@abdulahman-VirtualBox:~$ source /opt/ros/noetic/setup.bash
